@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.1",
+    "@clerk/nextjs": "^5.3.7",
+    "@nextui-org/modal": "^2.0.39",
     "@radix-ui/react-slot": "^1.1.0",
     "add": "^2.0.6",
     "class-variance-authority": "^0.7.0",

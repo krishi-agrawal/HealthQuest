@@ -1,19 +1,33 @@
-import { Footer } from "./footer";
-import Header from "./header";
-type Props = {
-  children:React.ReactNode;
-};
-
-const layout = ({children}:Props) => {
+import {
+  ClerkProvider,
+  SignInButton,
+  SignedIn,
+  SignedOut,
+  UserButton
+} from '@clerk/nextjs'
+import '../globals.css'
+import Header from './header'
+import { Footer } from './footer'
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return (
-    <div className="min-h-screen flex flex-col">
-      <Header/>
-      <main className="flex-1 flex flex-col items-center justify-center">
-        {children}
-      </main>
-      <Footer/>
-    </div>
+    <ClerkProvider>
+     <div>
+        <Header />
+        <main>
+          <SignedOut>
+            <SignInButton />
+          </SignedOut>
+          {/* <SignedIn>
+            <UserButton />
+          </SignedIn> */}
+          {children}
+        </main>
+        <Footer />
+      </div>
+    </ClerkProvider>
   )
 }
-
-export default layout
