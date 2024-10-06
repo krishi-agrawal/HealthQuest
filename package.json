@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "db:studio": "npx drizzle-kit studio",
-    "db:push": "npx drizzle-kit push"
+    "db:push": "npx drizzle-kit push",
+    "db:seed": "tsx ./scripts/seed.ts"
   },
   "dependencies": {
     "@clerk/nextjs": "^5.3.7",
@@ -26,10 +27,13 @@
     "next": "14.1.4",
     "react": "^18",
     "react-dom": "^18",
+    "shadcn": "^2.0.3",
     "shadcn-ui": "^0.9.0",
     "sheet": "^0.2.0",
+    "sonner": "^1.5.0",
     "tailwind-merge": "^2.5.2",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "tslib": "^2.7.0"
   },
   "devDependencies": {
     "@types/node": "^20",
@@ -39,8 +43,10 @@
     "drizzle-kit": "^0.24.2",
     "eslint": "^8",
     "eslint-config-next": "14.1.4",
+    "pg": "^8.12.0",
     "postcss": "^8",
     "tailwindcss": "^3.3.0",
+    "tsx": "^4.19.0",
     "typescript": "^5"
   }
 }

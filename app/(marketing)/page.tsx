@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Loader } from "lucide-react";
+import Link from "next/link";
 import {
   ClerkLoaded,
   ClerkLoading,
@@ -33,7 +34,7 @@ export default function Home() {
               </SignInButton>
             </SignedOut>
             <SignedIn>
-            <Button size="lg" variant="secondary"          className="w-full">Continue Learning</Button>
+            <Button size="lg" variant="secondary"          className="w-full"><Link href="/learn">Continued Learning</Link></Button>
             </SignedIn>
           </ClerkLoaded>
         </div>
