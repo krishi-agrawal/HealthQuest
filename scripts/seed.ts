@@ -61,7 +61,6 @@ const main = async () => {
         question: "Mental health refers to:"
       }
     ])
-
     await db.insert(schema.challengeOptions).values([
       {
         id: 1,
@@ -93,7 +92,7 @@ const main = async () => {
       }
     ])
 
-    console.log("Seeding finished");
+  console.log("Seeding finished");
   }catch(error){
     console.log(error);
     throw new Error("Failed to seed the database");
