@@ -1,5 +1,6 @@
 import {lessons,units} from "@/db/schema";
 import { UnitBanner } from "./unit-banner";
+import { LessonButton } from "./lesson-button";
 import { desc } from "drizzle-orm";
 
 type Props  =  {
@@ -21,11 +22,24 @@ export const Unit = ({id,order,title,description,lessons,activeLesson,activeLess
   <>
   <UnitBanner title={title} description={description}/>
   <div className="flex items-center flex-col relative">
-    {lessons.map((lesson,index)=>{
+    {lessons.map((lesson,i)=>{
       const isCurrent = lesson.id === activeLesson?.id;
       const isLocked = !lesson.completed && !isCurrent;
+
+      
+      return (
+        <LessonButton
+          key={lesson.id}
+          id={lesson.id}
+          index={i}
+          totalCount={lessons.length - 1}
+          current={isCurrent}
+          locked={isLocked}
+          percentage={activeLessonPercentage}
+        />
+      );
     })}
-    return <LessonButton/>
+    
   </div>
   </>
   )

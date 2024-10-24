@@ -49,6 +49,24 @@ const main = async () => {
         title: "Mental Health vs. Mental Illness",
         order: 2
       },
+      {
+        id: 3,
+        unitId: 1,
+        title: "Common Mental Health Disorders",
+        order: 3
+      },
+      {
+        id: 4,
+        unitId: 1,
+        title: "The Importance of Mental Health Awareness",
+        order: 4
+      },
+      {
+        id: 5,
+        unitId: 1,
+        title: "Myths and Facts about Mental Health",
+        order: 5
+      }
     ])
 
     await db.insert(schema.challenges).values([
